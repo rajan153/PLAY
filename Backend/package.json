@@ -1,0 +1,17 @@
+{
+  "name": "play",
+  "version": "1.0.0",
+  "description": "A backend for my newly project which name is PLAY.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javaScript",
+    "express",
+    "node",
+    "backend"
+  ],
+  "author": "Rajan",
+  "license": "ISC"
+}
