@@ -2,9 +2,10 @@
   "name": "play",
   "version": "1.0.0",
   "description": "A backend for my newly project which name is PLAY.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "javaScript",
@@ -13,5 +14,9 @@
     "backend"
   ],
   "author": "Rajan",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  }
 }
