@@ -8,7 +8,7 @@ const connectDB = async () => {
     );
     console.log(
       "Database connection ka data",
-      connectionInstance
+      connectionInstance.connection.host
     );
   } catch (error) {
     console.error("ERROR: ", error);
