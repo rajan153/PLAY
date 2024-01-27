@@ -1,10 +1,12 @@
 import { v2 as cloudinary } from "cloudinary";
 import fs from "fs";
+import dotenv from "dotenv";
+dotenv.config();
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
-  API_SECRET: process.env.CLOUDINARY_API_SECRET,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 const uploadOnCloudinary = async (localFilePath) => {
@@ -13,11 +15,12 @@ const uploadOnCloudinary = async (localFilePath) => {
 
     // upload the file to Cloudinary
     const response = await cloudinary.uploader.upload(localFilePath, {
-      resource_type: "auto",
+      resource_type: "image",
+      folder:"PLAY"
     });
 
     // File upload successfully
-    console.log("File Uploaded to Cloudinary!!", response.url);
+    fs.unlinkSync(localFilePath);
     return response;
   } catch (error) {
     // For removing locally saved temp file when upload operation failed
