@@ -374,7 +374,7 @@ const getUserChannelProfile = asyncHandler(async (req, res) => {
     },
   ]);
 
-  console.log("Data dekho", user);
+  // console.log("Data dekho", user);
 
   if (!channel?.length) {
     throw new ApiError(404, "Channel does'nt exists");
